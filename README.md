@@ -35,11 +35,11 @@ AI Tooling           LLM-assisted workflows · Custom agents
 
 I'm a polymath with shifting hyperfocus. Some constants:
 
-🥋 Martial arts practitioner
-🎮 Game dev hobbyist — shipped [Decoherence](https://store.steampowered.com/app/864940/Decoherence/) on Steam in a past life
-🇯🇵 Japanese speaker (JLPT N3) now channeling that energy into German
-🚀 Sci-fi enthusiast
-🏠 Running my own bare-metal home lab because cloud bills are for cowards
+🥋 Martial arts practitioner  
+🎮 Game dev hobbyist — shipped [Decoherence](https://store.steampowered.com/app/864940/Decoherence/) on Steam in a past life  
+🇯🇵 Japanese speaker (JLPT N3) now channeling that energy into German  
+🚀 Sci-fi enthusiast  
+🏠 Running my own bare-metal home lab because cloud bills are for cowards  
 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/HalbardHobby)
 [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/HalbardHobby)
