@@ -21,13 +21,10 @@ AI Tooling           LLM-assisted workflows · Custom agents
 
 ## 📌 Pinned
 
-🔧 **Home Lab** — Bare-metal GitOps: K8s, ArgoCD, Prometheus/Grafana, self-hosted everything. My production playground.
-
-🤖 **LLM CLI Agent** — My own take on an AI-assisted development tool. Because I wanted to understand how they work from the inside.
-
-📦 **Serverless Git LFS** — Custom Git LFS backend on AWS Lambda. Built to solve a real problem, stayed because it works.
-
-🇩🇪 **German Study Pipeline** — Automated Anki card generation for German vocabulary using LLMs, containerized and deployed the only way I know how: with too much infrastructure for the problem size.
+🔧 **Home Lab** — Bare-metal GitOps: K8s, ArgoCD, Prometheus/Grafana, self-hosted everything. My production playground.  
+🤖 **LLM CLI Agent** — My own take on an AI-assisted development tool. Because I wanted to understand how they work from the inside.  
+📦 **Serverless Git LFS** — Custom Git LFS backend on AWS Lambda. Built to solve a real problem, stayed because it works.  
+🇩🇪 **German Study Pipeline** — Automated Anki card generation for German vocabulary using LLMs, containerized and deployed the only way I know how: with too much infrastructure for the problem size.  
 
 ---
 
