@@ -6,7 +6,7 @@ Kubernetes · Terraform · AWS/GCP/Azure · GitOps · Self-service platforms
 
 I've built deployment platforms at enterprise scale (Warner, Disney, SmileDirect Club via Globant) and from scratch at startups. Former university lecturer. Based in Germany.
 
-> 📄 **[Download my CV (English)](./cv_english.pdf)** · **[Lebenslauf (Deutsch)](./cv_german.pdf)**
+> 📄 **[Download my CV (English)](./cv/cv_english.pdf)** · **[Lebenslauf (Deutsch)](./cv/cv_german.pdf)**
 
 ## What I build with
 
