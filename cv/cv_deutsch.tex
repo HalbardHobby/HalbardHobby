@@ -1,0 +1,281 @@
+%% Alejandro Espinosa — DevOps & Platform Engineer — German CV v3 (Final)
+%% Compile with: xelatex cv_german_final.tex
+\documentclass[a4paper,9pt]{extarticle}
+
+% ─── Packages ───
+\usepackage[top=1.5cm, bottom=1.5cm, left=2.0cm, right=2.0cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage[skip=0.2em]{parskip}
+\usepackage{microtype}
+\tolerance=1000
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=3em
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% ─── Colors ───
+\definecolor{headerband}{HTML}{1B2838}
+\definecolor{accent}{HTML}{0D9488}
+\definecolor{darktext}{HTML}{1A1A1A}
+\definecolor{graytext}{HTML}{555555}
+\definecolor{lightgray}{HTML}{D1D5DB}
+\definecolor{linkcolor}{HTML}{0D7377}
+\definecolor{headerwhite}{HTML}{F9FAFB}
+
+% ─── Fonts ───
+\setmainfont{Poppins}[
+  Path = ./fonts/Poppins/,
+  UprightFont = Poppins-Regular,
+  BoldFont = Poppins-Bold,
+  ItalicFont = Poppins-Italic,
+  BoldItalicFont = Poppins-BoldItalic,
+]
+\newfontfamily\lightfont{Poppins-Light}[
+  Path = ./fonts/Poppins/,
+  UprightFont = Poppins-Light,
+]
+\newfontfamily\mediumfont{Poppins-Medium}[
+  Path = ./fonts/Poppins/,
+  UprightFont = Poppins-Medium,
+]
+
+% ─── Hyperref ───
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkcolor,
+  linkcolor=linkcolor,
+  pdfauthor={Alejandro Espinosa},
+  pdftitle={Alejandro Espinosa — DevOps \& Platform Engineer},
+}
+
+% ─── Page style with footer on page 2+ ───
+\fancypagestyle{cvfooter}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyfoot[C]{\small\color{graytext}Alejandro Espinosa\enspace\textcolor{lightgray}{|}\enspace Page \thepage}%
+}
+\fancypagestyle{firstpage}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+\pagestyle{cvfooter}
+
+% ─── Section formatting ───
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}
+  {0em}
+  {\MakeUppercase}
+  [\vspace{-0.6em}{\color{accent}\rule{\textwidth}{1.2pt}}]
+
+\titlespacing{\section}{0pt}{0.4em}{0.2em}
+
+% ─── Custom commands ───
+\newcommand{\jobentry}[4]{%
+  {\mediumfont\color{darktext}#1}\hfill{\small\color{graytext}#4}\\
+  {\color{accent}\textbf{#2}}\enspace{\small\color{graytext}| #3}\par\vspace{0.2em}
+}
+
+\newcommand{\jobentrywithdesc}[5]{%
+  {\mediumfont\color{darktext}#1}\hfill{\small\color{graytext}#4}\\
+  {\color{accent}\textbf{#2}}\enspace{\small\color{graytext}| #3}\\[0.15em]
+  {\small\color{graytext}\textit{#5}}\par\vspace{0.2em}
+}
+
+\newcommand{\earlierrole}[4]{%
+  {\small\mediumfont\color{darktext}#1} {\small\color{graytext}| #2 | #3}\\
+  {\small\color{graytext}#4}\par\vspace{0.3em}
+}
+
+\newcommand{\skillcat}[2]{%
+  {\mediumfont\small\color{accent}#1:}\enspace{\small #2}\par\vspace{0.15em}
+}
+
+% ─── List formatting ───
+\setlist[itemize]{
+  leftmargin=3em,
+  itemsep=0.1em,
+  parsep=0pt,
+  topsep=0.15em,
+  label={\textcolor{accent}{\textbullet}},
+}
+
+% ─── Document ───
+\begin{document}
+\color{darktext}
+\thispagestyle{firstpage}
+
+% ══════════════════════════════════════════════════════════════
+%   HEADER BAND
+% ══════════════════════════════════════════════════════════════
+
+\noindent
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[headerband] ([yshift=0.5cm]current page.north west) rectangle ([yshift=-3.6cm]current page.north east);
+\end{tikzpicture}%
+\vspace*{-1.0cm}
+\begin{center}
+  {\LARGE\bfseries\color{headerwhite}ALEJANDRO ESPINOSA}\\[0.3em]
+  {\large\lightfont\color{accent}DevOps \& Platform Engineer}\\[0.55em]
+  {\small\color{headerwhite}%
+    Bochum, Deutschland\enspace{\color{accent}|}\enspace
+    \href{mailto:workwithme@alejoespinosa.com}{\color{headerwhite}workwithme@alejoespinosa.com}\enspace{\color{accent}|}\enspace
+    +49\,162\,1050507\\[0.2em]
+    \href{https://www.linkedin.com/in/alejoespinosa}{\color{headerwhite}linkedin.com/in/alejoespinosa}\enspace{\color{accent}|}\enspace
+    \href{https://github.com/halbardhobby}{\color{headerwhite}github.com/halbardhobby}
+  }\\[0.45em]
+  {\small\mediumfont\color{accent}EU Blue Card\enspace{\color{headerwhite}|}\enspace
+  \color{accent}Sofort verf\"ugbar\enspace{\color{headerwhite}|}\enspace
+  \color{accent}Kein Sponsoring erforderlich}
+\end{center}
+\vspace{0.3cm}
+
+% ══════════════════════════════════════════════════════════════
+%   ZUSAMMENFASSUNG
+% ══════════════════════════════════════════════════════════════
+
+\section{Zusammenfassung}
+
+DevOps und Platform Engineer mit 10 Jahren Erfahrung im Aufbau von Self-Service-Plattformen und der Automatisierung von Cloud-Infrastruktur auf AWS, GCP und Azure. Enterprise-Infrastruktur f\"ur HBO Max, Disney Parks und Kunden aus Healthcare und Fintech entwickelt und betrieben. Kubernetes-Plattformen von Grund auf in Startup- und Enterprise-Umgebungen aufgebaut. Cloud-Migration f\"ur ein Unternehmen mit ca.\ 1.000 Mitarbeitenden geleitet --- mit \"uber 40\,\% Kostenreduktion. Ehemaliger Universit\"atsdozent mit Fokus auf Developer Experience, Self-Service-Tooling und umfassende Dokumentation.
+
+% ══════════════════════════════════════════════════════════════
+%   SKILLS (immediately after summary — tech hiring scans here)
+% ══════════════════════════════════════════════════════════════
+
+\section{F\"ahigkeiten}
+
+\skillcat{Platform Engineering \& IaC}{Terraform (zertifiziert), Terragrunt, Ansible}
+\skillcat{Container \& Orchestrierung}{Kubernetes, Docker, Helm}
+\skillcat{CI/CD \& GitOps}{GitHub Actions, ArgoCD, Jenkins, AWS CodePipeline, GCP Cloud Build}
+\skillcat{Cloud-Plattformen}{AWS, GCP, Azure}
+\skillcat{Observability \& Reliability}{Prometheus, Grafana, CloudWatch, Datadog, SLO/SLI-Monitoring, Alerting}
+\skillcat{Security \& Compliance}{Container Security, RBAC, Secrets Management, DSGVO-konforme Infrastruktur}
+\skillcat{Programmierung}{Python, Go, Bash, JavaScript, SQL}
+\skillcat{Systeme}{Linux (prim\"ares OS), Systemd, DNS, Load Balancing}
+\skillcat{AI-Tooling}{LLM-gest\"utzte Workflows (Claude, Gemini), Entwicklung eigener KI-Agenten}
+
+% ══════════════════════════════════════════════════════════════
+%   EXPERIENCE
+% ══════════════════════════════════════════════════════════════
+
+\section{Berufserfahrung}
+
+\jobentrywithdesc{DevOps Engineer}{sovity GmbH}{Dortmund, Deutschland}{Jul 2025 -- Dez 2025}{Aufbau von CI/CD- und Platform-Engineering-Grundlagen f\"ur ein Datensouver\"anit\"ats-Startup auf Azure und Kubernetes.}
+\begin{itemize}
+  \item Kernprodukt-Hub in Kubernetes \"uber 2 Umgebungen (Dev + Prod) mittels GitHub Actions, Terraform und Terragrunt auf Azure bereitgestellt --- mit RBAC und Secrets Management konfiguriert.
+  \item Self-Service-Deployment-Pipelines aufgebaut, die es Entwicklern erm\"oglichen, mit automatisch provisionierter Infrastruktur zu deployen --- Deployment-Vorlaufzeit von Stunden auf Minuten reduziert.
+  \item Technische Schulden reduziert durch Audit und Entfernung redundanter Abh\"angigkeiten und ungenutzter IaC-Module in der Terragrunt-Codebasis.
+\end{itemize}
+\vspace{0.2em}
+
+\jobentry{Senior DevOps Engineer}{Globant}{Bogot\'{a}, Kolumbien}{Mai 2021 -- Nov 2024}
+{\small\color{graytext}\textit{Einsatz als Senior Consultant bei mehreren Enterprise-Kunden --- jeweils mit eigenst\"andigen Stacks, Teams und SLA-Anforderungen.}}
+\vspace{0.2em}
+{\small\mediumfont\color{accent}HBO Max}
+\begin{itemize}
+  \item Service-Recovery- und Incident-Response-Workflows auf AWS f\"ur eine Streaming-Plattform mit 70\,Mio.+ Abonnenten automatisiert --- manuelle Eingriffe reduziert und Mean Time to Recovery \"uber Produktionsservices hinweg verbessert.
+  \item On-Call-Rotationen \"ubernommen und operative Runbooks f\"ur ein 10-k\"opfiges DevOps-Team verfasst.
+\end{itemize}
+
+\vspace{0.15em}
+{\small\mediumfont\color{accent}Disney Parks}
+\begin{itemize}
+  \item T\"agliche operative Datensynchronisations-Pipelines \"uber Disneys US-Parks (inkl.\ Galaxy's Edge) verwaltet --- Daten f\"ur g\"astebezogene Apps und Fahrgesch\"aft-Betriebssysteme mit Zero-Downtime-Anforderungen bereitgestellt.
+  \item Datenvalidierung und Qualit\"atspr\"ufungen \"uber Sync-Outputs durchgef\"uhrt, einschlie\ss lich bedarfsgesteuerter Produktionsdatenanpassungen zur Sicherstellung der operativen Genauigkeit nachgelagerter Parksysteme.
+\end{itemize}
+
+\vspace{0.15em}
+{\small\mediumfont\color{accent}Gro\ss e Fintech-Plattform (NDA)}
+\begin{itemize}
+  \item GitOps-Deployment-Workflows mit ArgoCD auf Kubernetes implementiert --- deklaratives Infrastrukturmanagement und automatisierte Rollbacks in Produktion erm\"oglicht.
+  \item Infrastructure-as-Code-PRs reviewed und automatisierte Tests f\"ur IaC-\"Anderungen implementiert, um das Deployment-Risiko zu reduzieren.
+\end{itemize}
+
+\vspace{0.15em}
+{\small\mediumfont\color{accent}Healthcare-/MedTech-Plattform}
+\begin{itemize}
+  \item Pr\"aventives Auto-Scaling via Queue-Depth-Monitoring f\"ur eine medizinische Bildverarbeitungs-Pipeline (3D-Modelle, \raise.17ex\hbox{$\scriptstyle\sim$}12\,Min./Request) implementiert --- SLA-Compliance und unterbrechungsfreie Behandlungsabl\"aufe sichergestellt.
+  \item Terraform-State-Management und Kostenoptimierung \"uber AWS-Ressourcen im 5-k\"opfigen DevOps-Team durchgef\"uhrt.
+\end{itemize}
+
+\vspace{1em}
+\jobentry{Universit\"atsdozent}{Universidad del Rosario}{Bogot\'{a}, Kolumbien (Hybrid)}{Sep 2019 -- Jan 2021}
+\begin{itemize}
+  \item \glqq Einf\"uhrung in Industrie 4.0\grqq{} f\"ur Jurastudierende erstellt --- digitale Beweise, rechtliche Grenzf\"alle und fr\"uhe GPT-Anwendungen vermittelt, technische Konzepte f\"ur nicht-technische Zielgruppen aufbereitet.
+  \item Kurse f\"ur kolumbianische Regierungsinstitutionen durchgef\"uhrt: Python f\"ur nicht-technisches Personal, DevOps f\"ur Entwickler und Microservices-Architektur f\"ur das mittlere Management. \"Uber 150 Studierende insgesamt.
+\end{itemize}
+
+\vspace{1em}
+\jobentrywithdesc{Backend Developer \& DevOps Engineer}{Efecto Studios}{Bogot\'{a}, Kolumbien}{Jun 2018 -- Jun 2019}{CI/CD-Praktiken in einem Spielestudio ohne bisherige DevOps-Kultur eingef\"uhrt --- ein Novum in der kolumbianischen Spieleindustrie.}
+\begin{itemize}
+  \item CI-Pipeline mit Jenkins, Unreal Engine 4 und AWS aufgebaut, die t\"agliche Feature-Auslieferung erm\"oglichte und den Release-Prozess des Studios grundlegend umgestaltete.
+  \item Telemetrie-Integration f\"ur Decoherence (ver\"offentlicht auf Steam) umgesetzt --- datengest\"utzte Balance-Patches nach dem Launch erm\"oglicht.
+\end{itemize}
+
+\vspace{1em}
+\jobentrywithdesc{Innovation Engineer — Cloud-Migration \& Monitoring}{INGETEC S.A.}{Bogot\'{a}, Kolumbien (w\"ahrend M.S.-Studium)}{M\"ar 2017 -- Aug 2017}{Vollzeit-Cloud-Transformation bei einem der gr\"o\ss ten Ingenieurberatungsunternehmen Kolumbiens (\raise.17ex\hbox{$\scriptstyle\sim$}1.000 Mitarbeitende). Beendet aufgrund zeitlicher Konflikte mit dem Masterstudium.}
+\begin{itemize}
+  \item 3-k\"opfiges Team bei der Migration von On-Premises-Infrastruktur auf Google Cloud Platform geleitet --- Engineering-Workloads und historische Projektdaten in die Cloud \"uberf\"uhrt.
+  \item \"Uber 40\,\% Reduktion der Technologie- und Wartungskosten durch die Migration erreicht.
+  \item Cloud-Adoptionsstrategie in einem schlanken IT-Team von 6 Personen vorangetrieben --- Stakeholder-Kommunikation \"uber technische und nicht-technische Abteilungen hinweg gesteuert.
+\end{itemize}
+\vspace{0.15em}
+\jobentry{Research Assistant — Interactive Media Lab (COLIVRI)}{Universidad de los Andes}{Bogot\'{a}, Kolumbien}{Sep 2017 -- Feb 2018}
+\begin{itemize}
+  \item Experimentelle VR-Applikationen mit Unity und C\# entwickelt, um Hypothesen zur visuellen Wahrnehmung in immersiven Umgebungen zu testen --- Forschungsframework des Teams unterst\"utzt.
+\end{itemize}
+
+% ── Earlier Roles ──
+\vspace{1em}
+{\mediumfont\color{accent}\small FR\"UHERE POSITIONEN}
+
+\earlierrole{Analyst Software Engineer}{We\{co\}}{Aug 2016 -- Jan 2017}{Serverless-Backend auf Google Cloud Functions und Firebase aufgebaut. Kompletten Entwicklungszyklus auf GCP verantwortet.}
+\earlierrole{Research Assistant — Industrial Engineering}{Universidad de los Andes}{Jan 2016 -- Nov 2016}{Simulationsmodelle f\"ur Wissensverteilung und team\"ubergreifende Koordinationsstrategien entwickelt.}
+\earlierrole{Backend Developer}{On3D Studios}{Jul 2015 -- Okt 2015}{Web- und Spieleentwicklung. Beitrag zu Quantum Replica (sp\"ater auf Steam ver\"offentlicht).}
+{\small\mediumfont\color{darktext}Umzug nach Deutschland} {\small\color{graytext}| Nov 2024 -- Jun 2025}\\
+
+% ══════════════════════════════════════════════════════════════
+% ── ZERTIFIZIERUNGEN ──
+% ══════════════════════════════════════════════════════════════
+
+\section{Zertifizierungen}
+
+{\mediumfont HashiCorp Terraform Associate}\hfill{\small\color{graytext}Dez 2021}\\
+{\mediumfont IELTS Academic 7.5 (CEFR C1)}\hfill{\small\color{graytext}Sep 2023}
+
+% ══════════════════════════════════════════════════════════════
+% ── AUSBILDUNG ──
+% ══════════════════════════════════════════════════════════════
+
+\section{Ausbildung}
+
+{\mediumfont M.S.\ Computer Science}\enspace{\small\color{graytext}| Universidad de los Andes, Kolumbien | 2016--2019}\\
+{\mediumfont B.S.\ Computer Science}\enspace{\small\color{graytext}| Universidad de los Andes, Kolumbien | 2010--2015 (inkl.\ Nebenfach Japanisch)}
+
+% ══════════════════════════════════════════════════════════════
+% ── SPRACHKENNTNISSE ──
+% ══════════════════════════════════════════════════════════════
+
+\section{Sprachkenntnisse}
+
+{\small
+\begin{tabularx}{\textwidth}{@{}l X l X@{}}
+  \mediumfont Spanisch & Muttersprache & \mediumfont Deutsch & B1 \\
+  \mediumfont Englisch & C1 (IELTS Academic 7.5) & \mediumfont Japanisch & JLPT N3 \\
+\end{tabularx}
+}
+
+% ══════════════════════════════════════════════════════════════
+% ── PROJEKTE ──
+% ══════════════════════════════════════════════════════════════
+
+\section{Projekte}
+{\mediumfont Home Lab} --- Bare-Metal-Server (Ubuntu) mit containerisierten Services (Prometheus, Grafana, Pi-hole DNS, Media-Stack, Reverse Proxy), deployed via GitOps-Workflows. Infrastruktur versioniert in GitHub.
+\end{document}
